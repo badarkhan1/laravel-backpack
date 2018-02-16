@@ -490,8 +490,9 @@ class MonsterCrudController extends CrudController
         // ------ REVISIONS
         // You also need to use \Venturecraft\Revisionable\RevisionableTrait;
         // Please check out: https://laravel-backpack.readme.io/docs/crud#revisions
-        // $this->crud->allowAccess('revisions');
-
+        $this->crud->allowAccess('revisions');
+        $this->crud->with('revisionHistory');
+        
         $this->crud->enableAjaxTable();
 
         // ------ DATATABLE EXPORT BUTTONS

@@ -4,11 +4,17 @@ namespace App\Models;
 
 use Backpack\CRUD\CrudTrait;
 use Illuminate\Database\Eloquent\Model;
+use Venturecraft\Revisionable\RevisionableTrait;
 
 class Monster extends Model
 {
-    use CrudTrait;
+    use CrudTrait , RevisionableTrait;
 
+    public static function boot()
+    {
+        parent::boot();
+    }
+    
     /*
     |--------------------------------------------------------------------------
     | GLOBAL VARIABLES

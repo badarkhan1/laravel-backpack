@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Requests\ProductRequest as StoreRequest;
-// VALIDATION: change the requests to match your own file names if you need form validation
-use App\Http\Requests\ProductRequest as UpdateRequest;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
+// VALIDATION: change the requests to match your own file names if you need form validation
+use App\Http\Requests\ProductRequest as StoreRequest;
+use App\Http\Requests\ProductRequest as UpdateRequest;
 
 class ProductCrudController extends CrudController
 {

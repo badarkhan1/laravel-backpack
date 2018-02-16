@@ -27,6 +27,8 @@
                 <li><a href="{{ backpack_url('monster') }}"><i class="fa fa-optin-monster"></i> <span>Monsters</span></a></li>
                 <li><a href="{{ backpack_url('icon') }}"><i class="fa fa-font-awesome"></i> <span>Icons</span></a></li>
                 <li><a href="{{ backpack_url('product') }}"><i class="fa fa-shopping-cart"></i> <span>Products</span></a></li>
+                <li><a href="{{ backpack_url('tag') }}"><i class="fa fa-shopping-cart"></i> <span>Tags</span></a></li>
+                <li><a href="{{ backpack_url('post') }}"><i class="fa fa-shopping-cart"></i> <span>Posts</span></a></li>
               </ul>
           </li>
 
@@ -44,14 +46,27 @@
 
           <!-- Users, Roles Permissions -->
           <li class="treeview">
-            <a href="#"><i class="fa fa-group"></i> <span>Users, Roles, Permissions</span> <i class="fa fa-angle-left pull-right"></i></a>
+            <a href="#"><i class="fa fa-group">
+              
+            </i>
+              
+              @role('Super Admin')
+                  <span>Users, Roles, Permissions</span>
+              @else
+                  <span>Users</span>
+              @endrole
+
+            <i class="fa fa-angle-left pull-right"></i></a>
+            
             <ul class="treeview-menu">
               <li><a href="{{ backpack_url('user') }}"><i class="fa fa-user"></i> <span>Users</span></a></li>
-              <li><a href="{{ backpack_url('role') }}"><i class="fa fa-group"></i> <span>Roles</span></a></li>
-              <li><a href="{{ backpack_url('permission') }}"><i class="fa fa-key"></i> <span>Permissions</span></a></li>
+              @role('Super Admin')
+                  <li><a href="{{ backpack_url('role') }}"><i class="fa fa-group"></i> <span>Roles</span></a></li>
+                  <li><a href="{{ backpack_url('permission') }}"><i class="fa fa-key"></i> <span>Permissions</span></a></li>
+              @else
+              @endrole
             </ul>
           </li>
-
           <li class="treeview">
               <a href="#"><i class="fa fa-cogs"></i> <span>Advanced</span> <i class="fa fa-angle-left pull-right"></i></a>
               <ul class="treeview-menu">

@@ -25,10 +25,10 @@ return [
     'developer_link' => 'http://tabacitu.ro',
 
     // Show powered by Laravel Backpack in the footer?
-    'show_powered_by' => true,
+    'show_powered_by' => false,
 
     // The AdminLTE skin. Affects menu color and primary/secondary colors used throughout the application.
-    'skin' => 'skin-purple',
+    'skin' => 'skin-blue',
     // Options: skin-black, skin-blue, skin-purple, skin-red, skin-yellow, skin-green, skin-blue-light, skin-black-light, skin-purple-light, skin-green-light, skin-red-light, skin-yellow-light
 
     /*
@@ -42,7 +42,7 @@ return [
     |
     */
 
-    'registration_open' => true,
+    'registration_open' => false,
 
     /*
     |--------------------------------------------------------------------------

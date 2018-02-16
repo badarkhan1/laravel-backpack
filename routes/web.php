@@ -27,6 +27,8 @@ Route::group([
     CRUD::resource('monster', 'MonsterCrudController');
     CRUD::resource('icon', 'IconCrudController');
     CRUD::resource('product', 'ProductCrudController');
+    CRUD::resource('tag', 'TagCrudController');
+    CRUD::resource('post', 'PostCrudController');
 });
 
 Route::get('api/article', 'Api\ArticleController@index');
